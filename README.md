@@ -148,4 +148,4 @@ En la carpeta **`/documents/postman`** hi ha una col·lecció de peticions HTTP 
 
 -------------------
 
-:tw-1f47e: :tw-1f379: :tw-25aa: :tw-1f1f9: :tw-1f1ed: :tw-1f1ea: :tw-25aa: :tw-1f1ea: :tw-1f1f3: :tw-1f1e9: :tw-25aa: :tw-1f412: :tw-1f389:
+&#x1F47E; &#x1F379; &#x25AA; &#x1F1F9; &#x1F1ED; &#x1F1EA; &#x25AA; &#x1F1EA; &#x1F1F3; &#x1F1E9; &#x25AA; &#x1F412; &#x1F389;
