@@ -1,0 +1,545 @@
+{
+	"info": {
+		"_postman_id": "7a3f23eb-c4ac-4216-962f-66f82c9eab38",
+		"name": "REAL TIME CHAT API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34195777"
+	},
+	"item": [
+		{
+			"name": "REGISTER USER1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.collectionVariables.set(\"user1-ID\", jsonData.user.id);\r",
+							"var cookies = pm.cookies.get(\"access_token\"); \r",
+							"pm.collectionVariables.set(\"user1Cookie\", cookies);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"Roberto\",\r\n  \"lastname\": \"Baggio\",\r\n  \"username\": \"ro-ba\",\r\n  \"email\": \"ro@ba\",\r\n  \"password\" : \"roba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REGISTER USER2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.collectionVariables.set(\"user2-ID\", jsonData.user.id);\r",
+							"var cookies = pm.cookies.get(\"access_token\"); \r",
+							"pm.collectionVariables.set(\"user2Cookie\", cookies);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"Gianluca\",\r\n  \"lastname\": \"Vialli\",\r\n  \"username\": \"gi-vi\",\r\n  \"email\": \"gi@vi\",\r\n  \"password\" : \"givi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REGISTER USER3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.collectionVariables.set(\"user3-ID\", jsonData.user.id);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"Attilio\",\r\n  \"lastname\": \"Lombardo\",\r\n  \"username\": \"at-lo\",\r\n  \"email\": \"at@lo\",\r\n  \"password\" : \"atlo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGOUT USER1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var cookies = pm.cookies.get(\"access_token\"); \r",
+							"pm.collectionVariables.set(\"user1Cookie\", cookies);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "access_token={{user1Cookie}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/logout",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGOUT USER2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var cookies = pm.cookies.get(\"access_token\"); \r",
+							"pm.collectionVariables.set(\"user2Cookie\", cookies);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "access_token={{user2Cookie}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/logout",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN USER1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var cookies = pm.cookies.get(\"access_token\"); \r",
+							"pm.collectionVariables.set(\"user1Cookie\", cookies);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"ro-ba\",\r\n  \"password\" : \"roba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN USER2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var cookies = pm.cookies.get(\"access_token\"); \r",
+							"pm.collectionVariables.set(\"user2Cookie\", cookies);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"gi-vi\",\r\n  \"password\" : \"givi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MESSAGE FROM USER1 TO USER2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "access_token={{user1Cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Ciao Gianluca\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/messages/send/{{user2-ID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"messages",
+						"send",
+						"{{user2-ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MESSAGE FROM USER2 TO USER1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "access_token={{user2Cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Ciao Roberto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/messages/send/{{user1-ID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"messages",
+						"send",
+						"{{user1-ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MESSAGE FROM USER1 TO USER2 Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "access_token={{user1Cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Ciao Gianluca\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/messages/send/{{user2-ID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"messages",
+						"send",
+						"{{user2-ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MESSAGE FROM USER2 TO USER1 Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "access_token={{user2Cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Ciao Roberto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/messages/send/{{user1-ID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"messages",
+						"send",
+						"{{user1-ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MESSAGES between USER1  & USER2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "access_token={{user2Cookie}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/messages/{{user1-ID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"messages",
+						"{{user1-ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USERS from User2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "access_token={{user2Cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Ciao Roberto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:4004",
+			"type": "string"
+		},
+		{
+			"key": "user1-ID",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "user2-ID",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "user1Cookie",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "user2Cookie",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "user3-ID",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
